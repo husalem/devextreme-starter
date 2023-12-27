@@ -1,10 +1,13 @@
-import themes from 'devextreme/ui/themes';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+/// <reference types="@angular/localize" />
 
-import { AppModule } from './app/app.module';
+import { bootstrapApplication } from '@angular/platform-browser';
+import themes from 'devextreme/ui/themes';
+
+import { AppComponent } from './app/app.component';
+import { appConfig } from './app/app.config';
 
 
 themes.initialized(() => {
-  platformBrowserDynamic().bootstrapModule(AppModule)
+  bootstrapApplication(AppComponent, appConfig)
     .catch(err => console.error(err));
 });

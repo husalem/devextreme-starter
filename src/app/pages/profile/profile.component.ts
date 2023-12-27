@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
+import { DxFormModule } from 'devextreme-angular';
 
 @Component({
+  standalone: true,
   templateUrl: 'profile.component.html',
-  styleUrls: [ './profile.component.scss' ]
+  styleUrls: [ './profile.component.scss' ],
+  imports: [DxFormModule]
 })
 
 export class ProfileComponent {
